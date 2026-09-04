@@ -18,6 +18,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <FS.h>
+#include <vector>
 
 namespace gthumb {
 
