@@ -34,7 +34,14 @@
         <h1>Installation CNC32-TFT</h1>
         <p>Branchez votre écran ESP32 en USB à cet ordinateur.<br>Cliquez sur le bouton ci-dessous pour flasher le firmware.</p>
         
-        <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+        <esp-web-install-button manifest="manifest.json">
+            <button slot="activate">Installer le firmware</button>
+            <span slot="unsupported">
+                ⚠️ Erreur : Votre navigateur ne supporte pas le flashage USB (Web Serial).<br><br>
+                <strong>Veuillez ouvrir cette page sur un ordinateur avec Google Chrome, Microsoft Edge ou Opera.</strong><br>
+                (Safari, Firefox et les téléphones mobiles ne sont pas compatibles).
+            </span>
+        </esp-web-install-button>
     </div>
 
     <!-- Script requis pour le composant web ESP Web Tools -->
