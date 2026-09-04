@@ -40,7 +40,7 @@ Le brochage complet est figé dans [`include/board_config.h`](include/board_conf
 
 Vous pouvez installer ou mettre à jour ce firmware directement depuis votre navigateur (Chrome, Edge, Opera) grâce à la technologie Web Serial, sans avoir à installer PlatformIO :
 
-👉 **[Flasher le firmware depuis le Web](#)** *(Le lien sera ajouté une fois publié sur GitHub Pages)*
+👉 **[Flasher le firmware depuis le Web](https://christianaubry.github.io/CNC32-TFT/)**
 
 1. Branchez votre écran/ESP32 en USB.
 2. Cliquez sur **Connect** sur la page web.
