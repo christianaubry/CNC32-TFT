@@ -60,7 +60,7 @@ class FluidNC {
   // Descend en G38.2 jusqu'au contact (rapide), remonte légèrement, puis
   // redescend (lent), fixe le Z pièce à `plateThickness`
   // (épaisseur du palpeur), puis remonte de 5 mm. `maxDepth` borne la descente.
-  void probeZ(float plateThickness, float fastFeed, float slowFeed, float maxDepth = 25.0f);
+  void probeZ(float plateThickness, float fastFeed, float slowFeed, float maxDepth = 50.0f);
 
   // --- Position de changement d'outil (coord. machine, persistante NVS) -----
   bool         hasToolChangePos() const { return _tcpValid; }
