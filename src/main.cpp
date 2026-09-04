@@ -37,7 +37,6 @@ void setup() {
 #else
   esp_task_wdt_init(5, true);
 #endif
-  esp_task_wdt_add(NULL);
 
   // Carte SD : on initialise la SD en premier pour que
   // la librairie Arduino SPI prenne la main sur le bus VSPI. LovyanGFX
@@ -56,6 +55,10 @@ void setup() {
   nunchuk.begin();             // I2C Nunchuk
   
   fluid.requestStatus();       // premier rapport au plus tôt
+  
+  // On active le watchdog de la boucle courante tout à la fin,
+  // pour ne pas déclencher de timeout pendant les délais (splash screen) ou la calibration initiale.
+  esp_task_wdt_add(NULL);
 }
 
 void loop() {

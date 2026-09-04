@@ -5,6 +5,7 @@
 #include <LovyanGFX.hpp>
 #include <Arduino.h>
 #include <Preferences.h>
+#include <esp_task_wdt.h>
 #include "board_config.h"
 #include "../splash_screen.h"
 
@@ -164,6 +165,10 @@ void display_set_brightness(uint8_t value) {
 }
 
 void display_calibrate() {
+  // La calibration est bloquante (attente des appuis). On suspend le watchdog
+  // pour éviter un crash si l'utilisateur met plus de 5 secondes à toucher l'écran.
+  esp_task_wdt_delete(NULL);
+
   uint16_t cal[8];
   lcd.fillScreen(TFT_BLACK);
   lcd.setTextColor(TFT_WHITE);
@@ -181,4 +186,7 @@ void display_calibrate() {
   Serial.println("Touch cal: sauvegardee dans NVS");
 
   lv_obj_invalidate(lv_scr_act());
+
+  // On réactive le watchdog
+  esp_task_wdt_add(NULL);
 }
