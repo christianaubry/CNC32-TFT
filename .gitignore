@@ -6,8 +6,8 @@
 .DS_Store
 
 # Dossiers de test et cache
-GCODE/
-__pycache__/
+/GCODE/
+/__pycache__/
 *.txt
 
 # Fichiers compilés
