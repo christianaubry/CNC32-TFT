@@ -5,6 +5,10 @@ Réécriture moderne du firmware de l'écran tactile de la **CNC32 / RS-CNC32 de
 (DRO + pilotage + usinage) pour une carte **FluidNC** (firmware GRBL pour ESP32),
 avec laquelle il dialogue en **UART**.
 
+<img width="332" height="225" alt="Interface CNC32-usinage" src="https://github.com/user-attachments/assets/ee9943aa-3e0b-4242-975e-ada7120bb70e" />
+<img width="332" height="225" alt="Interface CNC32-selection" src="https://github.com/user-attachments/assets/1389c321-da1a-404a-ab6e-6feb09a9033c" />
+<img width="332" height="225" alt="Interface CNC32-fichiers" src="https://github.com/user-attachments/assets/cb90f99f-abbd-43ce-b72c-19e7fe8a1b52" />
+
 Remplace le firmware d'origine
 [mstrens/grbl_controller_esp32](https://github.com/mstrens/grbl_controller_esp32)
 en modernisant l'interface (LVGL).
